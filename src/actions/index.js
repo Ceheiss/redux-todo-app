@@ -5,16 +5,16 @@ export const addTodo = (text) => {
   };
 };
 
-export const deleteTodo = (todo) => {
+export const deleteTodo = (todoId) => {
   return {
     type: 'DELETE_TODO',
-    payload: todo,
+    payload: todoId,
   };
 };
 
-export const toggle = (todo) => {
+export const toggleTodo = (todoId) => {
   return {
     type: 'TOGGLE_TODO',
-    payload: todo,
+    payload: todoId,
   };
 };

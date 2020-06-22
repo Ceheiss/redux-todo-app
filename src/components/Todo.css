@@ -1,0 +1,7 @@
+.completedTodo {
+  background-color: greenyellow;
+}
+
+.notCompletedTodo {
+  background-color: grey;
+}

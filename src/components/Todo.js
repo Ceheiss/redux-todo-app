@@ -1,11 +1,30 @@
 import React from 'react';
+import { deleteTodo, toggleTodo } from '../actions';
+import { connect } from 'react-redux';
+import './Todo.css';
 
-const Todo = () => {
+const Todo = ({ text, id, deleteTodo, toggleTodo, completed }) => {
   return (
-    <div>
-      <p>I'm a todo</p>
+    <div className={completed ? 'completedTodo' : 'notCompletedTodo'}>
+      <p>{text}</p>
+      <button
+        onClick={(e) => {
+          e.preventDefault();
+          toggleTodo(id);
+        }}
+      >
+        Toggle
+      </button>
+      <button
+        onClick={(e) => {
+          e.preventDefault();
+          deleteTodo(id);
+        }}
+      >
+        Delete
+      </button>
     </div>
   );
 };
 
-export default Todo;
+export default connect(null, { deleteTodo, toggleTodo })(Todo);
