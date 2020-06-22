@@ -5,24 +5,28 @@ import './Todo.css';
 
 const Todo = ({ text, id, deleteTodo, toggleTodo, completed }) => {
   return (
-    <div className={completed ? 'completedTodo' : 'notCompletedTodo'}>
+    <div className={`todo ${completed ? 'completedTodo' : 'notCompletedTodo'}`}>
       <p>{text}</p>
-      <button
-        onClick={(e) => {
-          e.preventDefault();
-          toggleTodo(id);
-        }}
-      >
-        Toggle
-      </button>
-      <button
-        onClick={(e) => {
-          e.preventDefault();
-          deleteTodo(id);
-        }}
-      >
-        Delete
-      </button>
+      <div>
+        <button
+          className="todoBtnToggle"
+          onClick={(e) => {
+            e.preventDefault();
+            toggleTodo(id);
+          }}
+        >
+          Toggle
+        </button>
+        <button
+          className="todoBtnDelete"
+          onClick={(e) => {
+            e.preventDefault();
+            deleteTodo(id);
+          }}
+        >
+          Delete
+        </button>
+      </div>
     </div>
   );
 };

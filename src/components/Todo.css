@@ -5,3 +5,30 @@
 .notCompletedTodo {
   background-color: grey;
 }
+
+.todo {
+  padding: 10px;
+  margin: 5px;
+  width: 600px;
+  border: 2px solid #333;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo button {
+  border-radius: 7px;
+  padding: 4px;
+  color: #eee;
+  border: 1px solid #eee;
+  font-size: 15px;
+}
+
+.todoBtnDelete {
+  margin-left: 10px;
+  background-color: tomato;
+}
+
+.todoBtnToggle {
+  background-color: royalblue;
+}

@@ -1,0 +1,15 @@
+.addTodo {
+  margin-bottom: 20px;
+}
+
+.addTodoInput {
+  margin-right: 15px;
+}
+
+.addTodoButton {
+  border-radius: 7px;
+  font-size: 15px;
+  border: 1px solid #eee;
+  color: #eee;
+  background-color: rebeccapurple;
+}

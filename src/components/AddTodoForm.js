@@ -1,6 +1,7 @@
 import React from 'react';
 import { addTodo, updateText } from '../actions';
 import { connect } from 'react-redux';
+import './AddTodoForm.css';
 
 const AddTodoForm = ({ addTodo, updateText, text }) => {
   const onFormSubmit = (e) => {
@@ -14,10 +15,17 @@ const AddTodoForm = ({ addTodo, updateText, text }) => {
   };
 
   return (
-    <div>
-      <p>Add a Todo:</p>
-      <input value={text} type="text" onChange={onChange} />
-      <button onClick={onFormSubmit}>Add Todo</button>
+    <div className="addTodo">
+      <h3>Add a Todo:</h3>
+      <input
+        value={text}
+        type="text"
+        onChange={onChange}
+        className="addTodoInput"
+      />
+      <button onClick={onFormSubmit} className="addTodoButton">
+        Add Todo
+      </button>
     </div>
   );
 };
