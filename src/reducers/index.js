@@ -3,7 +3,6 @@ import { createId } from '../helpers';
 export const todoReducer = (state = [], action = {}) => {
   switch (action.type) {
     case 'ADD_TODO':
-      console.log(state);
       const newTodo = {
         id: createId(),
         text: action.payload,
@@ -13,7 +12,6 @@ export const todoReducer = (state = [], action = {}) => {
     case 'DELETE_TODO':
       return state.filter((todo) => todo.id !== action.payload);
     case 'TOGGLE_TODO':
-      console.log(action.payload);
       return state.map((todo) => {
         if (todo.id === action.payload) {
           todo.completed = !todo.completed;
