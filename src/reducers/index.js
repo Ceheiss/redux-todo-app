@@ -26,3 +26,13 @@ export const todoReducer = (state = [], action = {}) => {
       return state;
   }
 };
+
+export const textReducer = (state = '', action = {}) => {
+  switch (action.type) {
+    case 'UPDATE_TEXT':
+      state = action.payload;
+      return state;
+    default:
+      return state;
+  }
+};

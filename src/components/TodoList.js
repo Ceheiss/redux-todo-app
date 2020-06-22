@@ -14,7 +14,7 @@ const TodoList = ({ todos }) => {
     );
   });
   if (renderTodos.length === 0) {
-    return <div>Todos Here</div>;
+    return <div>No Todos Left! (or right hahaha... sorry)</div>;
   } else {
     return renderTodos;
   }
@@ -22,7 +22,7 @@ const TodoList = ({ todos }) => {
 
 const mapStateToProps = (state) => {
   return {
-    todos: state,
+    todos: state.todos,
   };
 };
 

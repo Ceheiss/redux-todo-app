@@ -18,3 +18,10 @@ export const toggleTodo = (todoId) => {
     payload: todoId,
   };
 };
+
+export const updateText = (currentText) => {
+  return {
+    type: 'UPDATE_TEXT',
+    payload: currentText,
+  };
+};
