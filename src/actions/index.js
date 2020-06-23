@@ -1,7 +1,12 @@
+import { createId } from '../helpers';
+
 export const addTodo = (text) => {
   return {
     type: 'ADD_TODO',
-    payload: text,
+    payload: {
+      text,
+      id: createId(),
+    },
   };
 };
 

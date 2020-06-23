@@ -1,11 +1,9 @@
-import { createId } from '../helpers';
-
 export const todoReducer = (state = [], action = {}) => {
   switch (action.type) {
     case 'ADD_TODO':
       const newTodo = {
-        id: createId(),
-        text: action.payload,
+        id: action.payload.id,
+        text: action.payload.text,
         completed: false,
       };
       return [...state, newTodo];
